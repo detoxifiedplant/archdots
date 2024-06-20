@@ -1,0 +1,56 @@
+@define-color base           #1E242F ;
+@define-color blue_border    #2C9FB5 ;
+@define-color primary_yellow #B08130 ;
+@define-color base_alt       #282f3e ;
+@define-color primary_blue   #b6c0cd ;
+
+* {
+  font-family: Cozette;
+  font-size: 24;
+  color: #e5e9f0;
+}
+
+window {
+  background-color: #2e3440;
+  /*border: 2px solid #88c0d0;*/
+  border: 2px solid #B4BEFE;
+  border-radius: 15px;
+}
+
+#outer-box {
+  margin-bottom: 12px;
+}
+
+#input {
+  border: none;
+  background-color: #2e3440;
+  margin: 7px;
+  box-shadow: none; /* Remove blue "border" */
+}
+
+#inner-box {
+  background-color: #2e3440;
+  margin: 7px;
+  margin-top: 0;
+}
+
+#entry {
+  padding-left: 5px;
+  border: none;
+  margin-left: -5px;
+  margin-right: -5px;
+  outline: none;
+}
+
+#entry:selected {
+  background-color: #44475a;
+}
+
+#text {
+  margin: 2px;
+}
+
+/* Hide backspace icon */
+.right {
+  color: transparent;
+}

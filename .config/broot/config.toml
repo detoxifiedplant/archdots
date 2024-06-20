@@ -1,0 +1,29 @@
+[[verbs]]
+key = "j"
+internal = "line_down"
+description = "Move down"
+
+[[verbs]]
+key = "k"
+internal = "line_up"
+description = "Move up"
+
+[[verbs]]
+key = "h"
+internal = "parent"
+description = "Go to parent directory"
+
+[[verbs]]
+key = "l"
+internal = "open_stay"
+description = "Open directory"
+
+[[verbs]]
+key = "gg"
+internal = "open_stay"
+description = "Go to top"
+
+[[verbs]]
+key = "G"
+internal = "last"
+description = "Go to bottom"

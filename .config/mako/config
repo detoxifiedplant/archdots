@@ -1,0 +1,23 @@
+font=Hack Nerd Font 18
+format=<b>%s</b> %a\n%b
+# background-color=#282C34
+# text-color=#ABB3BF
+background-color=#323232
+text-color=#b1b1b1
+width=300
+height=100
+margin=5
+padding=5
+border-size=3
+border-radius=10
+border-color=#B4BEFE
+default-timeout=4000
+ignore-timeout=1
+
+
+[urgency=normal]
+border-color=#B4BEFE
+
+[urgency=high]
+border-color=#E8A2AF
+
