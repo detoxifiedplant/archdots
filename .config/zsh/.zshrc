@@ -90,9 +90,9 @@ export DOCKER_BUIDKIT=1
 source /home/kamal/.config/broot/launcher/bash/br
 # export QT_QPA_PLATFORMTHEME=qt5ct
 
-export LANG=en_US.UTF-8
-export LANGUAGE=en_US:en
-export LC_ALL=en_US.UTF-8
+# export LANG=en_US.UTF-8
+# export LANGUAGE=en_US:en
+# export LC_ALL=en_US.UTF-8
 
 export DOTBARE_DIR="$HOME/.dotfiles"
 export DOTBARE_TREE="$HOME"
@@ -109,8 +109,10 @@ alias svim='sudo nvim'
 # alias ll="exa -l --color=always --group-directories-first"
 alias ls="eza --icons --git --group-directories-first"
 alias la="eza -a --icons --git --group-directories-first"
-alias lt="eza -a --icons --git --group-directories-first --tree"
 alias ll="eza -la --icons --git --group-directories-first"
+alias lf="eza -f --icons"
+alias lfa="eza -a -f --icons"
+alias lt="eza -a --icons --git --tree -L=3 --group-directories-first"
 alias lss="eza --icons --git -rs=modified"
 alias du="ncdu"
 alias ps="procs"
@@ -140,6 +142,7 @@ alias cr='cargo run'
 alias ct='cargo test'
 alias ff='fastfetch'
 alias bare='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree ~'
+alias db='dotbare'
 
 #pacman alias
 alias pac='sudo pacman -S'
@@ -179,7 +182,8 @@ alias dsystempurne="docker system prune --all"
 # tag related alias
 alias dsqledu="docker exec -it edusql mysql -u root -p"
 alias dexedu="docker exec -it educon bash"
-alias dedutech="docker_edutech"
+alias dedutech="docker_start_edutech"
+alias dsedutech="docker_stop_edutech"
 
 
 
