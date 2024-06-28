@@ -90,13 +90,14 @@ export DOCKER_BUIDKIT=1
 source /home/kamal/.config/broot/launcher/bash/br
 # export QT_QPA_PLATFORMTHEME=qt5ct
 
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 # export LANGUAGE=en_US:en
-# export LC_ALL=en_US.UTF-8
+export LC_ALL="en_US.UTF-8"
+# export LANG=C.UTF-8
+# export LC_CTYPE=C.UTF-8
 
 export DOTBARE_DIR="$HOME/.dotfiles"
 export DOTBARE_TREE="$HOME"
-
 
 
 alias zcon="vim ~/.config/zsh/.zshrc"
@@ -104,9 +105,6 @@ alias nano="vim"
 alias vi="vim -u NONE"
 alias v="\vim"
 alias svim='sudo nvim'
-# alias la="exa -a --color=always --group-directories-first"
-# alias ls="exa --color=always --group-directories-first"
-# alias ll="exa -l --color=always --group-directories-first"
 alias ls="eza --icons --git --group-directories-first"
 alias la="eza -a --icons --git --group-directories-first"
 alias ll="eza -la --icons --git --group-directories-first"
@@ -185,7 +183,9 @@ alias dexedu="docker exec -it educon bash"
 alias dedutech="docker_start_edutech"
 alias dsedutech="docker_stop_edutech"
 
-
+#tmux
+alias tmuxls="tmux ls"
+alias tmuxa="tmux attach"
 
 
 
