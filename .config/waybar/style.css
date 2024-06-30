@@ -111,7 +111,7 @@ window#waybar.chromium {
 
 #clock {
     /* background-color: #90b1b1; */
-    color: #ed8796;
+    color: #c6a0f6;
 /* mauve #c6a0f6 */
 /* red #ed8796 */
 	/* padding-top: 0.2em; */
@@ -151,7 +151,7 @@ window#waybar.chromium {
 #battery.critical:not(.charging),
 #bat2.critical:not(.charging) {
     /* background-color: #f53c3c; */
-    color: #f38ba8;
+    color: #fe640b;
     /* animation-name: blink; */
     /* animation-duration: 0.5s; */
     /* animation-timing-function: linear; */
