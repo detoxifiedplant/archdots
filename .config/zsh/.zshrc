@@ -184,8 +184,9 @@ alias dedutech="docker_start_edutech"
 alias dsedutech="docker_stop_edutech"
 
 #tmux
-alias tmuxls="tmux ls"
-alias tmuxa="tmux attach"
+alias tmls="tmux ls"
+alias tma="tmux attach"
+alias tmks="tmux kill-session -t"
 
 
 

@@ -111,9 +111,8 @@ window#waybar.chromium {
 
 #clock {
     /* background-color: #90b1b1; */
-    color: #c6a0f6;
-/* mauve #c6a0f6 */
-/* red #ed8796 */
+    color: #ed8796;
+	/* red #ed8796 */
 	/* padding-top: 0.2em; */
 	/* font-weight: 600; */
 }
