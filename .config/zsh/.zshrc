@@ -141,19 +141,20 @@ alias ct='cargo test'
 alias ff='fastfetch'
 alias bare='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree ~'
 alias db='dotbare'
+alias res='nmcli device wifi rescan'
 
 #pacman alias
 alias pac='sudo pacman -S'
-alias pacr='sudo pacman -Rns'    # removes dependencies and cache
+alias pacr='sudo pacman -Rns'     # removes dependencies and cache
 alias pacs='sudo pacman -Ss'      # search
 alias paci='sudo pacman -Si'      # info
 alias pacq='sudo pacman -Qs'      # query locally
 alias pacc='sudo pacman -Scc'     # clean cache
 alias pacli='pacman -Qe'          # installed packages
 alias pacup='sudo pacman -Syu'    # update, add 'a' to the list of letters to update AUR packages if you use yaourt
-alias paclo='pacman -Qdtq'    # list orphans
+alias paclo='pacman -Qdtq'        # list orphans
 alias pacro='paclo && sudo pacman -Rns $(pacman -Qtdq)' # remove orphans
-# alias paclf='pacman -Ql'   # list files
+# alias paclf='pacman -Ql'        # list files
 
 # tcpl alias
 alias psrun='python3 -m uvicorn app.main:app --reload --header server:TechFinoMSME | spacer'
@@ -177,17 +178,20 @@ alias dpsa="docker ps -a"
 alias dex="docker exec -it"
 alias dimagepurne="docker image prune -f"
 alias dsystempurne="docker system prune --all"
-# tag related alias
+# tag related alias edutech
 alias dsqledu="docker exec -it edusql mysql -u root -p"
 alias dexedu="docker exec -it educon bash"
 alias dedutech="docker_start_edutech"
 alias dsedutech="docker_stop_edutech"
+# tag related alias msme
+alias dsqlmsme="docker exec -it msmesql mysql -u root -p"
+alias dexmsme="docker exec -it msme bash"
+alias dmsme="docker_start_msme"
+alias dsmsme="docker_stop_msme"
 
 #tmux
 alias tmls="tmux ls"
 alias tma="tmux attach"
 alias tmks="tmux kill-session -t"
-
-
 
 
