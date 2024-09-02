@@ -8,22 +8,38 @@ plug "marlonrichert/zsh-autocomplete"
 plug "Aloxaf/fzf-tab"
 plug "kazhala/dotbare"
 # plug "zdharma-continuum/fast-syntax-highlighting"
-# eval "$(starship init zsh)"
 
 # to manually source any plugin
 # source ~/.config/zsh/fzf-tab.plugin.zsh
 
+eval "$(zoxide init zsh)"
+eval "$(atuin init zsh)"
+# eval "$(starship init zsh)"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 export TERM=alacritty
 export KEYTIMEOUT=5
 export MANPAGER="$(which nvim) +Man!"
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export XDG_CURRENT_DESKTOP=Unity
+export _ZO_ECHO=1
+export GPG_TTY=$(tty)
+export DOCKER_BUIDKIT=1
+source /home/kamal/.config/broot/launcher/bash/br
+# export QT_QPA_PLATFORMTHEME=qt5ct
+export LANG=en_US.UTF-8
+# export LANGUAGE=en_US:en
+export LC_ALL="en_US.UTF-8"
+# export LANG=C.UTF-8
+# export LC_CTYPE=C.UTF-8
+
+export DOTBARE_DIR="$HOME/.dotfiles"
+export DOTBARE_TREE="$HOME"
 
 # Load and initialise completion system
 # autoload -Uz compinit
 # compinit
 
 bindkey -v
-
 bindkey -M menuselect '^H' vi-backward-char
 bindkey -M menuselect '^K' vi-up-line-or-history
 bindkey -M menuselect '^L' vi-forward-char
@@ -40,9 +56,9 @@ bindkey -M viins '^N' vi-down-line-or-history
 bindkey -M viins '^e' edit-command-line
 bindkey -M vicmd '^e' edit-command-line
 bindkey -M viins '^I' fzf-tab-complete
+
 # Setting fd as the default source for fzf
 # export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix'
-
 export FZF_DEFAULT_COMMAND='fd --type f --color=never --hidden'
 export FZF_DEFAULT_OPTS='--no-height --color=bg+:#343d46,gutter:-1,pointer:#ff3c3c,info:#0dbc79,hl:#0dbc79,hl+:#23d18b,fg:#d0b979'
 # export FZF_DEFAULT_OPTS='--no-height --color=pointer:#31304D,gutter:-1,info:#0dbc79,hl:#FF0000,hl+:#3b4252,fg:#C0C0C0,bg+:#B6BBC4'
@@ -59,6 +75,7 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 # zstyle ':all-matches:*' list-colors ${(s.:.)customCol}
 
 
+# set nvim as default editor
 if [ $(command -v nvim) ]; then
 	export EDITOR=$(which nvim)
 	alias vim=$EDITOR
@@ -77,27 +94,10 @@ setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 unsetopt nomatch
 
+# juspay
 export DB_USER="juskml"
 export DB_PASS="juspkml"
 export DB_NAME="hyperswitch_db"
-export XDG_CURRENT_DESKTOP=Unity
-
-eval "$(zoxide init zsh)"
-eval "$(atuin init zsh)"
-export _ZO_ECHO=1
-export GPG_TTY=$(tty)
-export DOCKER_BUIDKIT=1
-source /home/kamal/.config/broot/launcher/bash/br
-# export QT_QPA_PLATFORMTHEME=qt5ct
-
-export LANG=en_US.UTF-8
-# export LANGUAGE=en_US:en
-export LC_ALL="en_US.UTF-8"
-# export LANG=C.UTF-8
-# export LC_CTYPE=C.UTF-8
-
-export DOTBARE_DIR="$HOME/.dotfiles"
-export DOTBARE_TREE="$HOME"
 
 
 alias zcon="vim ~/.config/zsh/.zshrc"
@@ -119,7 +119,6 @@ alias cp="cp -r"
 alias rm="rm -i"
 alias t="tree"
 alias q="exit"
-alias snow="shutdown now"
 alias rn="ranger"
 alias -- -="z -"
 alias mkcd='foo(){ mkdir -p "$1"; cd "$1" }; foo '
@@ -137,11 +136,12 @@ alias p='python3'
 alias fman='compgen -c | fzf | xargs man'
 alias tl='tldr'
 alias cr='cargo run'
-alias ct='cargo test'
+alias ct='cargo test -- --show-output' # `--nocapture` works as well
 alias ff='fastfetch'
 alias bare='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree ~'
 alias db='dotbare'
 alias res='nmcli device wifi rescan'
+alias bp='btop'
 
 #pacman alias
 alias pac='sudo pacman -S'
@@ -189,7 +189,7 @@ alias dexmsme="docker exec -it msme bash"
 alias dmsme="docker_start_msme"
 alias dsmsme="docker_stop_msme"
 
-#tmux
+# tmux
 alias tmls="tmux ls"
 alias tma="tmux attach"
 alias tmks="tmux kill-session -t"
