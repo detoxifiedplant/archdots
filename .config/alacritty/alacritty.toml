@@ -1,11 +1,10 @@
-import = ["/home/kamal/.config/alacritty/themes/themes/catppuccin_mocha.toml"]
 
 [window]
 decorations = 'None'
 dynamic_padding = false
 padding = { x = 0, y = 0 }
 dynamic_title = true
-opacity = 0.95
+# opacity = 0.95
 # startup_mode = "Fullscreen"
 
 [colors]
@@ -16,7 +15,8 @@ cursor = "CellForeground"
 text = "CellBackground"
 
 [colors.primary]
-background = "#0f0f0f"
+# background = "#0f0f0f"
+background = "#212121"
 bright_foreground = "#eaeaea"
 dim_foreground = "#828482"
 foreground = "#c5c8c6"
@@ -40,7 +40,7 @@ text = "#000000"
 
 [font]
 builtin_box_drawing = true
-size = 18
+size = 19
 
 [font.bold]
 family = "terminal-font"
@@ -70,12 +70,17 @@ hide_when_typing = true
 history = 100000
 multiplier = 3
 
-[shell]
+[terminal.shell]
 args = ["--login"]
 program = "/usr/bin/zsh"
 
 [env]
 TERM = "xterm-256color"
+
+[general]
+import = ["/home/kamal/.config/alacritty/themes/themes/catppuccin_mocha.toml"]
+
+[terminal]
 # [window.dimensions]
 # columns = 90
 # lines = 27
