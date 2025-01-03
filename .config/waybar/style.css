@@ -6,7 +6,7 @@
 }
 
 window#waybar {
-    background-color: #323232;
+    background-color: alpha(#323232, 0.99);
     /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
     color: #b1b1b1;
     /* transition-property: background-color; */
@@ -288,97 +288,103 @@ label:focus {
 }
 
 /*
-rosewater #f4dbd6
-flamingo #f0c6c6
-pink #f5bde6
-mauve #c6a0f6
-red #ed8796
-maroon #ee99a0
-peach #f5a97f
-yellow #eed49f
-green #a6da95
-teal #8bd5ca
-sky #91d7e3
-sapphire #7dc4e4
-blue #8aadf4
-lavender #b7bdf8
-text #cad3f5
-subtext1 #b8c0e0
-subtext0 #a5adcb
-overlay2 #939ab7
-overlay1 #8087a2
-overlay0 #6e738d
-surface2 #5b6078
-surface1 #494d64
-surface0 #363a4f
-base #24273a
-mantle #1e2030
-crust #181926;@define-color rosewater #dc8a78
-flamingo #dd7878
-pink #ea76cb
-mauve #8839ef
-red #d20f39
-maroon #e64553
-peach #fe640b
-yellow #df8e1d
-green #40a02b
-teal #179299
-sky #04a5e5
-sapphire #209fb5
-blue #1e66f5
-lavender #7287fd
-text #4c4f69
-subtext1 #5c5f77
-subtext0 #6c6f85
-overlay2 #7c7f93
-overlay1 #8c8fa1
-overlay0 #9ca0b0
-surface2 #acb0be
-surface1 #bcc0cc
-surface0 #ccd0da
-base #eff1f5
-mantle #e6e9ef
-crust #dce0e8
-rosewater #f5e0dc
-flamingo #f2cdcd
-pink #f5c2e7
-mauve #cba6f7
-red #f38ba8
-maroon #eba0ac
-peach #fab387
-yellow #f9e2af
-green #a6e3a1
-teal #94e2d5
-sky #89dceb
-sapphire #74c7ec
-blue #89b4fa
-lavender #b4befe
-text #cdd6f4
-subtext1 #bac2de
-subtext0 #a6adc8
-overlay2 #9399b2
-overlay1 #7f849c
-overlay0 #6c7086
-surface2 #585b70
-surface1 #45475a
-surface0 #313244
+#08BDBA
+#78A9FF
+#BE95FF
+#33B1FF
+#3DDBD9
+#BF616A
+#96CDFB
+#C9CBFF
+#DDB6F2
+#F28FAD
+#F2CDCD
+#F8BD96
+#bd93f9
+#ABE9B3
+#E8A2AF
 base #1e1e2e
-mantle #181825
-crust #11111b
-color: #B5E8E0
-color: #F28FAD
-border-bottom: 2px solid #ABE9B3
-color: #FAE3B0
-border-color: #E8A2AF
-background: #bd93f9
-background-color: #BF616A
-background: #F8BD96
-background: #DDB6F2
-background: #96CDFB
+base #24273a
+base #eff1f5
+blue #1e66f5
+blue #89b4fa
+blue #8aadf4
 color: #89DCEB
-background: #F28FAD
-background: #C9CBFF
-background: #F2CDCD
 color: #90b1b1
+color: #B5E8E0
+color: #B6E9A5
+green: #40a02b
+green: #a6da95
+green: #a6e3a1
+teal:  #179299
+teal:  #8bd5ca
+teal:  #94e2d5
+color: #F28FAD
+crust: #11111b
+crust: #181926
+crust: #dce0e8
+flamingo #dd7878
+flamingo #f0c6c6
+flamingo #f2cdcd
+lavender #7287fd
+lavender #b4befe
+lavender #b7bdf8
+mantle #181825
+mantle #1e2030
+mantle #e6e9ef
+maroon #e64553
+maroon #eba0ac
+maroon #ee99a0
+mauve #8839ef
+mauve #c6a0f6
+mauve #cba6f7
+peach #f5a97f
+peach #fab387
+peach #fe640b
+pink #ea76cb
+pink #f5bde6
+pink #f5c2e7
+red #d20f39
+red #ed8796
+red #f38ba8
+rosewater #dc8a78
+rosewater #f4dbd6
+rosewater #f5e0dc
+sapphire #209fb5
+sapphire #74c7ec
+sky #04a5e5
+sky #89dceb
+sky #91d7e3
+yellow #df8e1d
+yellow #eed49f
+yellow #f9e2af
+color: #FAE3B0
+subtext0 #6c6f85
+subtext0 #a5adcb
+subtext0 #a6adc8
+subtext1 #5c5f77
+subtext1 #b8c0e0
+subtext1 #bac2de
+surface0 #313244
+surface0 #363a4f
+surface0 #ccd0da
+surface1 #45475a
+surface1 #494d64
+surface1 #bcc0cc
+surface2 #585b70
+surface2 #5b6078
+surface2 #acb0be
+text #4c4f69
+text #cad3f5
+text #cdd6f4
+overlay0 #6c7086
+overlay0 #6e738d
+overlay0 #9ca0b0
+overlay1 #7f849c
+overlay1 #8087a2
+overlay1 #8c8fa1
+overlay2 #7c7f93
+overlay2 #9399b2
+overlay2 #939ab7
 
 */

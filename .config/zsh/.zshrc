@@ -105,40 +105,25 @@ unsetopt nomatch
 export DB_USER="juskml"
 export DB_PASS="juspkml"
 export DB_NAME="hyperswitch_db"
-
+# export DATABASE_URL=postgres://$DB_USER:$DB_PASS@localhost:5432/$DB_NAME
 
 alias zcon="vim ~/.config/zsh/.zshrc"
-alias nano="vim"
 alias vi="vim -u NONE"
 alias v="\vim"
 alias svim='sudo nvim'
-alias ls="eza --icons --git --group-directories-first"
-alias la="eza -a --icons --git --group-directories-first"
-alias ll="eza -la --icons --git --group-directories-first"
-alias lf="eza -f --icons"
-alias lfa="eza -a -f --icons"
-alias lt="eza -a --icons --git --tree -L=3 --group-directories-first"
-alias lss="eza --icons --git -rs=modified"
-alias du="ncdu"
-alias ps="procs"
 alias c='clear'
 alias cp="cp -r"
 alias rm="rm -i"
 alias t="tree"
 alias q="exit"
-alias rn="ranger"
-alias -- -="z -"
 alias mkcd='foo(){ mkdir -p "$1"; cd "$1" }; foo '
-alias sql='mysql'
-alias cat='bat'
 alias rg='rg -i'
 alias lg='lazygit'
 alias whe='pwd'
-alias grep='rg'
+alias -- -="z -"
 alias ..='z ..'
 alias ...='z ../..'
 alias ....='z ../../..'
-alias cd='z'
 alias p='python3'
 alias fman='compgen -c | fzf | xargs man'
 alias tl='tldr'
@@ -151,6 +136,22 @@ alias db='dotbare'
 alias res='nmcli device wifi rescan'
 alias bp='btop'
 
+# changes default packages
+alias cd='z'
+alias ls="eza --icons --git --group-directories-first"
+alias la="eza -a --icons --git --group-directories-first"
+alias ll="eza -la --icons --git --group-directories-first"
+alias lf="eza -f --icons"
+alias lfa="eza -a -f --icons"
+alias lt="eza -a --icons --git --tree -L=3 --group-directories-first"
+alias lss="eza --icons --git -rs=modified"
+alias du="ncdu"
+alias ps="procs"
+alias curl='curlie'
+alias cat='bat'
+alias grep='rg'
+alias nano="vim"
+
 #pacman alias
 alias pac='sudo pacman -S'
 alias pacr='sudo pacman -Rns'     # removes dependencies and cache
@@ -158,7 +159,7 @@ alias pacs='sudo pacman -Ss'      # search
 alias paci='sudo pacman -Si'      # info
 alias pacq='sudo pacman -Qs'      # query locally
 alias pacc='sudo pacman -Scc'     # clean cache
-alias pacli='pacman -Qe'          # installed packages
+alias pacls='pacman -Qe'          # installed packages
 alias pacup='sudo pacman -Syu'    # update, add 'a' to the list of letters to update AUR packages if you use yaourt
 alias paclo='pacman -Qdtq'        # list orphans
 alias pacro='paclo && sudo pacman -Rns $(pacman -Qtdq)' # remove orphans
@@ -186,13 +187,6 @@ alias dpsa="docker ps -a"
 alias dex="docker exec -it"
 alias dimagepurne="docker image prune -f"
 alias dsystempurne="docker system prune --all"
-
-# tag related alias edutech
-alias dsqledu="docker exec -it edusql mysql -u root -p"
-alias dexedu="docker exec -it educon bash"
-# tag related alias msme
-alias dsqlmsme="docker exec -it msmesql mysql -u root -p"
-alias dexmsme="docker exec -it msme bash"
 
 # tmux
 alias tmls="tmux ls"
