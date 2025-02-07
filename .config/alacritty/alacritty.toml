@@ -40,7 +40,7 @@ text = "#000000"
 
 [font]
 builtin_box_drawing = true
-size = 19
+size = 18
 
 [font.bold]
 family = "terminal-font"

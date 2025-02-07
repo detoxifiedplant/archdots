@@ -108,6 +108,7 @@ export DB_NAME="hyperswitch_db"
 # export DATABASE_URL=postgres://$DB_USER:$DB_PASS@localhost:5432/$DB_NAME
 
 alias zcon="vim ~/.config/zsh/.zshrc"
+alias zsou="source $ZSHRC"
 alias vi="vim -u NONE"
 alias v="\vim"
 alias svim='sudo nvim'
@@ -127,9 +128,6 @@ alias ....='z ../../..'
 alias p='python3'
 alias fman='compgen -c | fzf | xargs man'
 alias tl='tldr'
-alias cr='cargo run'
-alias ct='cargo test -- --show-output' # `--nocapture` works as well
-alias cck='cargo check'
 alias ff='fastfetch'
 alias bare='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree ~'
 alias db='dotbare'
@@ -143,7 +141,8 @@ alias la="eza -a --icons --git --group-directories-first"
 alias ll="eza -la --icons --git --group-directories-first"
 alias lf="eza -f --icons"
 alias lfa="eza -a -f --icons"
-alias lt="eza -a --icons --git --tree -L=3 --group-directories-first"
+alias lt="eza --icons --git --tree -L=3 --group-directories-first"
+# alias lt="eza -a --icons --git --tree -L=3 --group-directories-first"
 alias lss="eza --icons --git -rs=modified"
 alias du="ncdu"
 alias ps="procs"
@@ -165,10 +164,12 @@ alias paclo='pacman -Qdtq'        # list orphans
 alias pacro='paclo && sudo pacman -Rns $(pacman -Qtdq)' # remove orphans
 # alias paclf='pacman -Ql'        # list files
 
-# tcpl alias
-alias psrun='python3 -m uvicorn app.main:app --reload --header server:TechFinoMSME | spacer'
-alias cpf='copytcplfiles'
-alias ref='reverttcplfiles'
+# rust alias
+alias cr='cargo run'
+alias ct='cargo test -- --show-output' # `--nocapture` works as well
+alias cck='cargo check'
+alias crb='cargo run --bin'
+alias cre='cargo run --example'
 
 # nix alias
 alias npi='nix profile install'
@@ -179,8 +180,9 @@ alias nph='nix profile history'
 alias nixgc='nix-store --gc'
 
 # docker alias
-alias dcou="docker compose up -d"
-alias dcod="docker compose down"
+alias dup="docker compose up -d"
+alias ddown="docker compose down"
+alias dres="docker compose restart"
 alias dimages="docker images"
 alias dimagesa="docker images -a"
 alias dpsa="docker ps -a"
@@ -195,7 +197,20 @@ alias tmks="tmux kill-session -t"
 
 # haskell
 alias hask="ghci"
-alias car="cabal run"
+alias crun="cabal run"
 alias gtui="ghcup tui"
 
+alias click="foo(){ cd ~/ground/click; clickhouse "$@";}; foo "
 
+export ch_url='http://localhost:8123'
+export ch_host='localhost'
+export ch_password='clickhouse'
+export ch_user='clickhouse'
+export ch_username='default'
+export ch_port='9000'
+export uplink_host="localhost"
+export uplink_port="3000"
+export pg_url='postgresql://stream_analytics:bitabeam@localhost/stream_analytics'
+export sessions_file_path=/home/gautam/workspace/bytebeam/bytebeam/stream-analytics-service/rust-sessions/generated-sessions/sessions.csv
+export consoled_endpoint='http://foobar.com'
+export bytebeam_api_key='dfdsfdsfss'
