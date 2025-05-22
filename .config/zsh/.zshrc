@@ -101,14 +101,8 @@ setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 unsetopt nomatch
 
-# juspay
-export DB_USER="juskml"
-export DB_PASS="juspkml"
-export DB_NAME="hyperswitch_db"
-# export DATABASE_URL=postgres://$DB_USER:$DB_PASS@localhost:5432/$DB_NAME
-
 alias zcon="vim ~/.config/zsh/.zshrc"
-alias zsou="source $ZSHRC"
+alias souz="source $ZSHRC"
 alias vi="vim -u NONE"
 alias v="\vim"
 alias svim='sudo nvim'
@@ -126,6 +120,7 @@ alias ..='z ..'
 alias ...='z ../..'
 alias ....='z ../../..'
 alias p='python3'
+alias penv='source ~/.pyenv/bin/activate'
 alias fman='compgen -c | fzf | xargs man'
 alias tl='tldr'
 alias ff='fastfetch'
@@ -133,6 +128,7 @@ alias bare='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree ~'
 alias db='dotbare'
 alias res='nmcli device wifi rescan'
 alias bp='btop'
+alias gc='git clone'
 
 # changes default packages
 alias cd='z'
@@ -146,7 +142,7 @@ alias lt="eza --icons --git --tree -L=3 --group-directories-first"
 alias lss="eza --icons --git -rs=modified"
 alias du="ncdu"
 alias ps="procs"
-alias curl='curlie'
+alias curl='xh'
 alias cat='bat'
 alias grep='rg'
 alias nano="vim"
@@ -169,6 +165,7 @@ alias cr='cargo run'
 alias ct='cargo test -- --show-output' # `--nocapture` works as well
 alias cck='cargo check'
 alias crb='cargo run --bin'
+alias crf='cargo run --features'
 alias cre='cargo run --example'
 
 # nix alias
@@ -186,9 +183,10 @@ alias dres="docker compose restart"
 alias dimages="docker images"
 alias dimagesa="docker images -a"
 alias dpsa="docker ps -a"
+alias dclean='docker ps -aq | xargs -r docker rm -f'
 alias dex="docker exec -it"
 alias dimagepurne="docker image prune -f"
-alias dsystempurne="docker system prune --all"
+alias dspurne="docker system prune --all"
 
 # tmux
 alias tmls="tmux ls"
@@ -200,17 +198,26 @@ alias hask="ghci"
 alias crun="cabal run"
 alias gtui="ghcup tui"
 
-alias click="foo(){ cd ~/ground/click; clickhouse "$@";}; foo "
+# alias click="foo(){ cd ~/ground/click; clickhouse server "$@";}; foo "
+# alias clickc="foo(){ cd ~/ground/click; clickhouse-client "$@";}; foo "
+alias click="clickhouse-client"
 
-export ch_url='http://localhost:8123'
-export ch_host='localhost'
-export ch_password='clickhouse'
-export ch_user='clickhouse'
-export ch_username='default'
-export ch_port='9000'
-export uplink_host="localhost"
-export uplink_port="3000"
-export pg_url='postgresql://stream_analytics:bitabeam@localhost/stream_analytics'
-export sessions_file_path=/home/gautam/workspace/bytebeam/bytebeam/stream-analytics-service/rust-sessions/generated-sessions/sessions.csv
-export consoled_endpoint='http://foobar.com'
-export bytebeam_api_key='dfdsfdsfss'
+export CLICKHOUSE_HOST="localhost"
+export CLICKHOUSE_PORT=9000
+export CLICKHOUSE_USER="default"
+export CLICKHOUSE_PASSWORD=""
+
+# dbc
+export PG_URL="postgresql://postgres@localhost/dbc"
+export CONSOLED_FIXPROTOBUFF_ENDPOINT="check"
+export CONSOLED_STREAMS_ENDPOINT="check"
+export CONSOLED_API_KEY="check"
+export HOSTNAME="dbc-0"
+
+export DATABASE_URL='postgresql://stream_analytics:bitabeam@localhost/alerts'
+export POSTGRES_USER="stream_analytics"
+export POSTGRES_PASSWORD="bitabeam"
+export POSTGRES_DB="alerts"
+
+# export uplink_host="localhost"
+# export uplink_port="3001"
